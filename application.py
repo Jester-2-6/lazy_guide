@@ -8,4 +8,5 @@ async def echo(request: Request):
     body = await request.body()
     return Response(body)
 
-uvicorn.run("application:app")
+if __name__ == "__main__":
+  uvicorn.run("application:app")
