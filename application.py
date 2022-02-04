@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI, Request, Response
 
-app = FastAPI(debug=True)
+application = app = FastAPI(debug=True)
 
 @app.post("/api/v1/echo/")
 async def echo(request: Request):
@@ -9,4 +9,4 @@ async def echo(request: Request):
     return Response(body)
 
 if __name__ == "__main__":
-  uvicorn.run("application:app")
+  uvicorn.run("application:application")
